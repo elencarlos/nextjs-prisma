@@ -58,11 +58,11 @@ const AddTodoInput = () => {
     >
       <input
         className={styles.input}
-        placeholder="Buy some milk"
+        placeholder="do something"
         value={text}
         onChange={e => setText(e.target.value)}
       />
-      <button className={styles.addButton}>Add</button>
+      <button className={styles.addButton}>+</button>
     </form>
   );
 };
@@ -71,21 +71,19 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Railway NextJS Prisma</title>
+        <title>Todo app</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>Todos</h1>
+        <h1 className={styles.title}>My Todos</h1>
         <h2 className={styles.desc}>
-          NextJS app connected to Postgres using Prisma and hosted on{" "}
-          <a href="https://railway.app">Railway</a>
+          Lets todo{" "}
         </h2>
       </header>
 
       <main className={styles.main}>
         <AddTodoInput />
-
         <TodoList />
       </main>
     </div>
